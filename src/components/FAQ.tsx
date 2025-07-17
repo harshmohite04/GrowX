@@ -1,4 +1,3 @@
-import React from 'react';
 
 const faqs = [
   { q: 'Why is digital marketing important for every business?', a: 'Digital marketing helps businesses reach a larger audience, increase brand awareness, and drive sales through online channels.' },

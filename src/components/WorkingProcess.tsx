@@ -1,4 +1,3 @@
-import React from 'react';
 
 const steps = [
   { title: 'Consultation', description: 'Initial discussion to understand your business, goals, and challenges.' },

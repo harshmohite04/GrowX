@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Results = () => (
   <section id="results" className="px-8 py-12 bg-black">

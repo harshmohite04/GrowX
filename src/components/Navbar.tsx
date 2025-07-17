@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Navbar = () => (
   <nav className="w-full flex items-center justify-between px-8 py-4  border-b border-gray-800" style={{backgroundColor:"#0d0d0d"}}>

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const WhyChooseUs = () => (
   <section id="why-choose" className="px-8 py-12 bg-black border-b border-gray-800">

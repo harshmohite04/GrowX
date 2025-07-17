@@ -1,4 +1,3 @@
-import React from 'react';
 import ManImage from '../assets/Image2.png'
 import BgImage from "../assets/Background.png"
 const Hero = () => (
