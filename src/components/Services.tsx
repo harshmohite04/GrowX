@@ -4,6 +4,7 @@ import Track from "../assets/Track.png"
 import Icon1 from "../assets/Icon1.png"
 import Icon from "../assets/Icon.png"
 import Email from "../assets/Email.png"
+import Social from "../assets/Social.png"
 const Services = () => (
   <section id="services" className="px-4 py-12 bg-[#111] flex flex-col items-center border border-[#18191C] rounded-xl mx-4 my-8">
     <div className="flex items-center gap-4 mb-4 w-full">
@@ -34,19 +35,52 @@ const Services = () => (
 
 
 
+      <div className="bg-[#3DD47E] rounded-xl p-5 flex  justify-between h-40 shadow-lg text-white text-center">
 
-      <div className="bg-[#3DD47E] rounded-xl p-5 flex flex-col justify-between h-40 shadow-lg text-white text-center">
-        <div className="font-semibold text-lg mb-2">Service Card</div>
-        <div className="text-gray-400">Put your content here</div>
+        <div className="h-full justify-between">
+
+          <div className="w-11/12">
+            <div className="font-semibold w-11/12 text-lg bg-[#ffffff] text-black rounded-lg">Social Media </div>
+            <div className="font-semibold w-10/12 text-lg mb-2 bg-[#ffffff] text-black rounded-lg">optimization</div>
+          </div>
+          <div className="flex mt-5">
+            <img src={Icon} alt="" />
+            <div className="text-center self-center ml-2 font-semibold text-xl ">Learn more</div>
+          </div>
+        </div>
+        <div className="justify-center items-center text-center self-center">
+          <img src={Social} alt="" />
+        </div>
       </div>
+
+
+
       <div className="bg-[#191A23] rounded-xl p-5 flex flex-col justify-between h-40 shadow-lg text-white text-center">
         <div className="font-semibold text-lg mb-2">Service Card</div>
         <div className="text-gray-400">Put your content here</div>
       </div>
-      <div className="bg-[#3DD47E] rounded-xl p-5 flex flex-col justify-between h-40 shadow-lg text-white text-center">
-        <div className="font-semibold text-lg mb-2">Service Card</div>
-        <div className="text-gray-400">Put your content here</div>
+
+
+      <div className="bg-[#3DD47E] rounded-xl p-5 flex  justify-between h-40 shadow-lg text-white text-center">
+
+        <div className="h-full justify-between">
+
+          <div className="w-11/12">
+            <div className="font-semibold w-full text-lg bg-[#ffffff] text-black rounded-lg">Website & APP  </div>
+            <div className="font-semibold w-full text-lg mb-2 bg-[#ffffff] text-black rounded-lg">Design & Dev</div>
+          </div>
+          <div className="flex mt-5">
+            <img src={Icon} alt="" />
+            <div className="text-center self-center ml-2 font-semibold text-xl ">Learn more</div>
+          </div>
+        </div>
+        <div className="justify-center items-center text-center self-center">
+          <img src={Social} alt="" />
+        </div>
       </div>
+
+
+
       <div className="bg-[#3DD47E] rounded-xl p-5 flex flex-col justify-between h-40 shadow-lg text-white text-center">
         <div className="font-semibold text-lg mb-2">Service Card</div>
         <div className="text-gray-400">Put your content here</div>
@@ -112,7 +146,7 @@ const Services = () => (
       </div>
 
 
-      
+
     </div>
   </section>
 );
