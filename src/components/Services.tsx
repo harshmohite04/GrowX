@@ -1,4 +1,3 @@
-import React from 'react';
 
 
 import Track from "../assets/Track.png"
