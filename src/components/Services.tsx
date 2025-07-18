@@ -133,7 +133,7 @@ type ServiceType = {
   subtitle: string;
   bg: string;
   text: string;
-  icon: JSX.Element;
+  icon: JSX.Element | null;
   arrowColor: string;
   learnColor: string;
   pillBg: string;
