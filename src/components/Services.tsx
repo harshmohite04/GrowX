@@ -1,6 +1,10 @@
 import type { JSX } from "react";
-
-
+import SocailMediaMarketing from '../assets/socialMediaMarketing.svg'
+import WebDevApp from '../assets/WebDevApp1.svg'
+import PayAsPerClick from '../assets/PayAsPerClick.svg'
+import EmailMarketing from '../assets/EmailMarketing.svg'
+import ContentCreation from '../assets/ContentCreation.svg'
+import AnalyticsTracking from '../assets/AnalyticsTracking.svg'
 const services = [
   {
     title: "Search engine",
@@ -8,7 +12,7 @@ const services = [
     bg: "bg-[#191A23]",
     text: "text-green-400",
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="6" fill="#3DD47E"/><path d="M16 20h8M20 16v8" stroke="#111" strokeWidth="2" strokeLinecap="round"/></svg>
+null
     ),
     arrowColor: "text-[#191A23]",
     learnColor: "text-white",
@@ -22,13 +26,14 @@ const services = [
     bg: "bg-[#3DD47E]",
     text: "text-black",
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="6" fill="#fff"/><path d="M20 16v8M16 20h8" stroke="#3DD47E" strokeWidth="2" strokeLinecap="round"/></svg>
+      // <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="6" fill="#fff"/><path d="M20 16v8M16 20h8" stroke="#3DD47E" strokeWidth="2" strokeLinecap="round"/></svg>
+      null
     ),
     arrowColor: "text-[#3DD47E]",
     learnColor: "text-white",
     pillBg: "bg-white text-black",
     pillText: "Social Media Marketing",
-    illustration: null,
+    illustration: <img src={SocailMediaMarketing} alt="" />,
   },
   {
     title: "Website & APP",
@@ -36,7 +41,7 @@ const services = [
     bg: "bg-[#191A23]",
     text: "text-black",
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="12" y="8" width="16" height="24" rx="4" fill="#fff"/><rect x="16" y="28" width="8" height="2" rx="1" fill="#3DD47E"/></svg>
+      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="12" y="8" width="16" height="24" rx="4" fill="#fff" /><rect x="16" y="28" width="8" height="2" rx="1" fill="#3DD47E" /></svg>
     ),
     arrowColor: "text-[#3DD47E]",
     learnColor: "text-white",
@@ -46,7 +51,7 @@ const services = [
     heading: (
       <div className="absolute inset-0 flex flex-col justify-center items-start p-5">
         <h2 className="font-serif font-bold text-white text-2xl sm:text-3xl md:text-2xl lg:text-2xl leading-tight text-left">
-          Our Digital<br/>Marketing Expertise
+          Our Digital<br />Marketing Expertise
         </h2>
       </div>
     ),
@@ -56,15 +61,13 @@ const services = [
     subtitle: "advertising(PPC)",
     bg: "bg-[#3DD47E]",
     text: "text-black",
-    icon: (
-      <svg width="36" height="36" fill="none" viewBox="0 0 36 36"><circle cx="18" cy="18" r="18" fill="#fff" fillOpacity="0.2"/><path d="M18 10v10" stroke="#111" strokeWidth="2" strokeLinecap="round"/><circle cx="18" cy="10" r="2" fill="#111"/><path d="M24 18c0 3.314-2.686 6-6 6s-6-2.686-6-6" stroke="#111" strokeWidth="2" strokeLinecap="round"/></svg>
-    ),
+    icon: (null),
     arrowColor: "text-[#3DD47E]",
     learnColor: "text-white",
     pillBg: "bg-white text-black",
     pillText: "Pay-per-click advertising(PPC)",
     illustration: (
-      <svg width="60" height="40" viewBox="0 0 60 40" fill="none"><rect x="5" y="10" width="40" height="25" rx="3" fill="#fff" stroke="#111" strokeWidth="1.5"/><path d="M20 25l5 5 10-10" stroke="#3DD47E" strokeWidth="2" strokeLinecap="round"/></svg>
+      <img src={PayAsPerClick} alt="" />
     ),
   },
   {
@@ -73,13 +76,13 @@ const services = [
     bg: "bg-[#3DD47E]",
     text: "text-green-400",
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="8" y="12" width="24" height="16" rx="4" fill="#3DD47E"/><path d="M8 12l12 10 12-10" stroke="#111" strokeWidth="2"/></svg>
-    ),
+      null),
     arrowColor: "text-[#191A23]",
     learnColor: "text-white",
     pillBg: "bg-white text-black",
     pillText: "Email Marketing",
-    illustration: null,
+    illustration:
+      <img src={EmailMarketing} alt="" />,
   },
   {
     title: "Content",
@@ -87,13 +90,12 @@ const services = [
     bg: "bg-[#191A23]",
     text: "text-black",
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="6" fill="#fff"/><rect x="14" y="14" width="12" height="12" rx="2" fill="#3DD47E"/></svg>
-    ),
+      null),
     arrowColor: "text-[#3DD47E]",
     learnColor: "text-white",
     pillBg: "bg-green-400 text-black",
     pillText: "Content Creation",
-    illustration: null,
+    illustration: <img src={ContentCreation} alt="" />,
   },
   {
     title: "Analytics and",
@@ -101,28 +103,28 @@ const services = [
     bg: "bg-[#3DD47E]",
     text: "text-green-400",
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="8" y="8" width="24" height="24" rx="6" fill="#3DD47E"/><path d="M16 24v-8M20 28V12M24 20v-4" stroke="#111" strokeWidth="2" strokeLinecap="round"/></svg>
-    ),
+      null),
     arrowColor: "text-[#191A23]",
     learnColor: "text-white",
     pillBg: "bg-white text-black",
     pillText: "Analytics and Tracking",
-    illustration: null,
+    illustration: <img src={AnalyticsTracking} alt="" />,
   },
-    {
+  {
     title: "Website & APP",
     subtitle: "Design & Development",
     bg: "bg-[#191A23]",
     text: "text-black",
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><rect x="12" y="8" width="16" height="24" rx="4" fill="#fff"/><rect x="16" y="28" width="8" height="2" rx="1" fill="#3DD47E"/></svg>
-    ),
+      null),
     arrowColor: "text-[#3DD47E]",
     learnColor: "text-white",
     pillBg: "bg-green-400 text-black",
     pillText: "Website & APP Development",
-    illustration: null,
-    
+    illustration:
+
+      <img src={WebDevApp} alt="" />,
+
   },
 ];
 
@@ -141,9 +143,11 @@ type ServiceType = {
 };
 
 function ServiceCard({ service }: { service: ServiceType & { heading?: JSX.Element } }) {
+  // Determine if the card is green
+  const isGreen = service.bg.includes('bg-[#3DD47E]');
   return (
     <div
-      className={`relative rounded-2xl p-6 flex flex-col justify-between min-h-[220px] h-full shadow-lg overflow-hidden ${service.bg} transition-transform duration-300 hover:scale-105 hover:shadow-green-400/30 border border-transparent hover:border-green-400 group focus:outline-none focus:ring-4 focus:ring-green-400/40`}
+      className={`relative rounded-2xl p-6 flex flex-col justify-between min-h-[220px] h-full shadow-lg overflow-hidden ${service.bg} transition-all duration-300 hover:scale-105 hover:shadow-green-400/30 border border-transparent hover:border-green-400 group focus:outline-none focus:ring-4 focus:ring-green-400/40 ${isGreen ? 'hover:bg-black' : ''}`}
       tabIndex={0}
       data-aos="fade-up"
       data-aos-delay="100"
@@ -162,7 +166,7 @@ function ServiceCard({ service }: { service: ServiceType & { heading?: JSX.Eleme
           </div>
           {/* Illustration if present */}
           {service.illustration && (
-            <div className="absolute right-4 bottom-20 sm:bottom-24">
+            <div className="absolute right-4 bottom-20 sm:bottom-15">
               {service.illustration}
             </div>
           )}
@@ -170,7 +174,7 @@ function ServiceCard({ service }: { service: ServiceType & { heading?: JSX.Eleme
           <div className="flex items-center gap-3 mt-8 sm:mt-12">
             <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white transition-transform duration-300 group-hover:translate-x-2">
               {/* Arrow icon */}
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#fff"/><path d="M9 14h10M15 10l4 4-4 4" stroke="#3DD47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#fff" /><path d="M9 14h10M15 10l4 4-4 4" stroke="#3DD47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </span>
             <span className={`text-lg sm:text-2xl font-medium whitespace-nowrap ${service.learnColor} transition-colors duration-200 group-hover:text-green-400`}>
               Learn more
