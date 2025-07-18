@@ -3,13 +3,12 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
-import CTA from './components/CTA';
 import Results from './components/Results';
 import WorkingProcess from './components/WorkingProcess';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import Testimonials from './components/Testimonials';
 function App() {
 
   return (
@@ -19,10 +18,10 @@ function App() {
       <Features />
       <Services />
       <WhyChooseUs />
-      <CTA />
       <Results />
       <WorkingProcess />
       <FAQ />
+      <Testimonials/>
       <Contact />
       <Footer />
     </div>

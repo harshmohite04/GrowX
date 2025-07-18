@@ -1,4 +1,3 @@
-
 const brands = [
   {
     name: 'Allianz',
@@ -36,15 +35,15 @@ const brands = [
 ];
 
 const Features = () => (
-  <section className="px-8 py-8" style={{backgroundColor:'#111'}}>
-    <div className="flex items-center gap-4 mb-6">
-      <span className="text-white text-lg font-semibold border-b-2 border-white pb-1">Featured in</span>
-      <span className="text-gray-500 text-lg font-semibold">|</span>
-      <span className="text-gray-500 text-lg font-semibold">Our Clients</span>
+  <section className="px-2 sm:px-8 py-6 sm:py-8" style={{backgroundColor:'#111'}}>
+    <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-4 sm:mb-6">
+      <span className="text-white text-base sm:text-lg font-semibold border-b-2 border-white pb-1">Featured in</span>
+      <span className="text-gray-500 text-base sm:text-lg font-semibold">|</span>
+      <span className="text-gray-500 text-base sm:text-lg font-semibold">Our Clients</span>
     </div>
-    <div className="flex gap-6 flex-wrap">
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 w-full justify-items-center">
       {brands.map((brand, idx) => (
-        <div key={idx} className="bg-[#181818] rounded-lg w-60 h-24 flex items-center justify-center shadow border border-[#222]">
+        <div key={idx} className="bg-[#181818] rounded-lg w-36 sm:w-60 h-16 sm:h-24 flex items-center justify-center shadow border border-[#222]">
           {brand.logo}
         </div>
       ))}
