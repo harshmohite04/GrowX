@@ -1,10 +1,5 @@
-import React from "react";
 import type { JSX } from "react";
-import Track from "../assets/Track.png"
-import Icon1 from "../assets/Icon1.png"
-import Icon from "../assets/Icon.png"
-import Email from "../assets/Email.png"
-import Social from "../assets/Social.png"
+
 
 const services = [
   {
@@ -147,7 +142,13 @@ type ServiceType = {
 
 function ServiceCard({ service }: { service: ServiceType & { heading?: JSX.Element } }) {
   return (
-    <div className={`relative rounded-2xl p-5 flex flex-col justify-between min-h-[180px] h-full shadow-lg overflow-hidden ${service.bg}`}>  
+    <div
+      className={`relative rounded-2xl p-6 flex flex-col justify-between min-h-[220px] h-full shadow-lg overflow-hidden ${service.bg} transition-transform duration-300 hover:scale-105 hover:shadow-green-400/30 border border-transparent hover:border-green-400 group focus:outline-none focus:ring-4 focus:ring-green-400/40`}
+      tabIndex={0}
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="700"
+    >
       {/* Heading for the third card */}
       {service.heading ? (
         service.heading
@@ -167,11 +168,13 @@ function ServiceCard({ service }: { service: ServiceType & { heading?: JSX.Eleme
           )}
           {/* Bottom row: arrow and Learn more */}
           <div className="flex items-center gap-3 mt-8 sm:mt-12">
-            <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white">
+            <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white transition-transform duration-300 group-hover:translate-x-2">
               {/* Arrow icon */}
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#fff"/><path d="M9 14h10M15 10l4 4-4 4" stroke="#3DD47E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
-            <span className={`text-lg sm:text-2xl font-medium whitespace-nowrap ${service.learnColor}`}>Learn more</span>
+            <span className={`text-lg sm:text-2xl font-medium whitespace-nowrap ${service.learnColor} transition-colors duration-200 group-hover:text-green-400`}>
+              Learn more
+            </span>
           </div>
         </>
       )}
