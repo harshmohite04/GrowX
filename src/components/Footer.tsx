@@ -37,9 +37,9 @@ const Footer = () => (
       </div>
       {/* Right: Newsletter */}
       <div className="flex-1 min-w-[250px] flex flex-col gap-4 items-center md:items-end">
-        <form className="bg-[#22232A] rounded-xl p-4 flex gap-4 w-full max-w-md items-center">
+        <form className="bg-[#22232A] rounded-xl p-4 sm:flex gap-4 w-full max-w-md items-center">
           <input type="email" placeholder="Email" className="flex-1 px-4 py-2 rounded-lg bg-transparent border border-gray-400 text-white placeholder-gray-400 focus:outline-none" />
-          <button type="submit" className="bg-green-400 text-black font-semibold rounded-lg px-6 py-2 hover:bg-green-300 transition">Subscribe to news</button>
+          <button type="submit" className="bg-green-400 text-black mt-5 sm:mt-0 font-semibold rounded-lg px-6 py-2 hover:bg-green-300 transition">Subscribe to news</button>
         </form>
       </div>
     </div>
