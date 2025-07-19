@@ -4,16 +4,16 @@ const Results = () => (
   <section id="results" className="px-2 sm:px-8 py-8 sm:py-12 bg-black">
     {/* Heading */}
     <div className="flex items-center gap-2 mb-6">
-      <span className="bg-green-400 text-black text-lg sm:text-2xl font-bold px-4 py-1 rounded-lg">REAL RESULTS WITH</span>
-      <span className="bg-[#191A23] flex items-center rounded-lg px-4 py-1 text-lg sm:text-2xl font-bold">
+      <span className="bg-green-400 text-black text-lg sm:text-2xl 2xl:text-4xl font-bold px-4 py-1 rounded-lg">REAL RESULTS WITH</span>
+      <span className="bg-[#191A23] flex items-center 2xl:text-4xl rounded-lg px-4 py-1 text-lg sm:text-2xl font-bold">
         <span className="text-white">Grow</span><span className="text-green-400 ml-1">X</span>
       </span>
     </div>
     {/* Speech bubble and watering can */}
     <div className="relative justify-end mb-4 min-h-[120px] hidden md:flex">
-      <div className="absolute right-0 -top-28 md:-top-15 flex flex-col items-end z-20">
+      <div className="absolute right-0 -top-28 md:-top-15 2xl:-top-40 flex flex-col items-end z-20">
         {/* Watering can SVG */}
-        <img src={Image5} alt="Watering Can" className="w-24 sm:w-32 md:w-80 mb-2" />
+        <img src={Image5} alt="Watering Can" className="w-24  sm:w-32 md:w-80 2xl:w-120 mb-2" />
         {/* Speech bubble */}
         
       </div>
