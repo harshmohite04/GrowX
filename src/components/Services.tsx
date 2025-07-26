@@ -188,6 +188,14 @@ function ServiceCard({ service }: { service: ServiceType & { heading?: JSX.Eleme
 
 const Services = () => (
   <section id="services" className="px-2 sm:px-4 py-8 sm:py-12 bg-[#111] flex flex-col items-center border border-[#18191C] rounded-xl mx-2 sm:mx-4 my-6 sm:my-8">
+    {/* Intro Section */}
+    <div className="w-full flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+      <span className="bg-green-400 text-black font-bold text-3xl px-4 py-2 rounded-lg">Services</span>
+      <span className="bg-[#191A23] text-white text-base px-6 py-3 rounded-2xl w-full sm:w-8/12">
+        At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:
+      </span>
+    </div>
+    {/* Services Grid */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
       {services.map((service, idx) => (
         <ServiceCard key={idx} service={service} />
