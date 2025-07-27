@@ -53,7 +53,7 @@ const Drive = () => {
       </div>
       {/* Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 w-full max-w-4xl mb-10">
-        {cardData.map((card, idx) => (
+        {cardData.map((card) => (
           <div
             key={card.title}
             className="border border-green-400 rounded-2xl p-6 sm:p-8 flex flex-col items-center min-h-[180px] sm:min-h-[200px] bg-[#18191e] w-full transition-transform duration-200 hover:scale-105 hover:shadow-green-400/30 hover:shadow-lg group"
