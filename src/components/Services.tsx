@@ -1,4 +1,5 @@
 import type { JSX } from "react";
+import { useNavigate } from 'react-router-dom';
 import SocailMediaMarketing from '../assets/socialMediaMarketing.svg'
 import WebDevApp from '../assets/WebDevApp1.svg'
 import PayAsPerClick from '../assets/PayAsPerClick.svg'
@@ -19,6 +20,7 @@ null
     pillBg: "bg-green-400 text-black",
     pillText: "Search engine optimization",
     illustration: null,
+    to: "/seo"
   },
   {
     title: "Social Media",
@@ -33,7 +35,8 @@ null
     learnColor: "text-white",
     pillBg: "bg-white text-black",
     pillText: "Social Media Marketing",
-    illustration: <img src={SocailMediaMarketing} alt="" />,
+    illustration: <img src={SocailMediaMarketing} alt="" />, 
+    to: "/social-media"
   },
   {
     title: "Website & APP",
@@ -55,6 +58,7 @@ null
         </h2>
       </div>
     ),
+    to: "/web-dev"
   },
   {
     title: "Pay-per-click",
@@ -69,6 +73,7 @@ null
     illustration: (
       <img src={PayAsPerClick} alt="" />
     ),
+    to: "/ppc"
   },
   {
     title: "Email",
@@ -82,7 +87,8 @@ null
     pillBg: "bg-white text-black",
     pillText: "Email Marketing",
     illustration:
-      <img src={EmailMarketing} alt="" />,
+      <img src={EmailMarketing} alt="" />, 
+    to: "/email-marketing"
   },
   {
     title: "Content",
@@ -95,7 +101,8 @@ null
     learnColor: "text-white",
     pillBg: "bg-green-400 text-black",
     pillText: "Content Creation",
-    illustration: <img src={ContentCreation} alt="" />,
+    illustration: <img src={ContentCreation} alt="" />, 
+    to: "/content-creation"
   },
   {
     title: "Analytics and",
@@ -108,7 +115,8 @@ null
     learnColor: "text-white",
     pillBg: "bg-white text-black",
     pillText: "Analytics and Tracking",
-    illustration: <img src={AnalyticsTracking} alt="" />,
+    illustration: <img src={AnalyticsTracking} alt="" />, 
+    to: "/analytics-tracking"
   },
   {
     title: "Website & APP",
@@ -122,9 +130,8 @@ null
     pillBg: "bg-green-400 text-black",
     pillText: "Website & APP Development",
     illustration:
-
-      <img src={WebDevApp} alt="" />,
-
+      <img src={WebDevApp} alt="" />, 
+    to: "/web-dev"
   },
 ];
 
@@ -140,18 +147,24 @@ type ServiceType = {
   pillText: string;
   illustration?: JSX.Element | null;
   heading?: JSX.Element;
+  to?: string;
 };
 
 function ServiceCard({ service }: { service: ServiceType & { heading?: JSX.Element } }) {
+  const navigate = useNavigate();
   // Determine if the card is green
   const isGreen = service.bg.includes('bg-[#3DD47E]');
   return (
     <div
-      className={`relative rounded-2xl p-6 flex flex-col justify-between min-h-[220px] h-full shadow-lg overflow-hidden ${service.bg} transition-all duration-300 hover:scale-105 hover:shadow-green-400/30 border border-transparent hover:border-green-400 group focus:outline-none focus:ring-4 focus:ring-green-400/40 ${isGreen ? 'hover:bg-black' : ''}`}
+      className={`relative rounded-2xl p-6 flex flex-col justify-between min-h-[220px] h-full shadow-lg overflow-hidden ${service.bg} transition-all duration-300 hover:scale-105 hover:shadow-green-400/30 border border-transparent hover:border-green-400 group focus:outline-none focus:ring-4 focus:ring-green-400/40 ${isGreen ? 'hover:bg-black' : ''} cursor-pointer`}
       tabIndex={0}
       data-aos="fade-up"
       data-aos-delay="100"
       data-aos-duration="700"
+      onClick={() => service.to && navigate(service.to)}
+      onKeyDown={e => { if ((e.key === 'Enter' || e.key === ' ') && service.to) { navigate(service.to); } }}
+      role="button"
+      aria-label={`Learn more about ${service.title}`}
     >
       {/* Heading for the third card */}
       {service.heading ? (
@@ -187,7 +200,7 @@ function ServiceCard({ service }: { service: ServiceType & { heading?: JSX.Eleme
 }
 
 const Services = () => (
-  <section id="services" className="px-2 sm:px-4 py-8 sm:py-12 bg-[#111] flex flex-col items-center border border-[#18191C] rounded-xl mx-2 sm:mx-4 my-6 sm:my-8">
+  <div id="services" className="px-2 sm:px-4 py-8 sm:py-12 bg-[#111] flex flex-col items-center border border-[#18191C] rounded-xl mx-2 sm:mx-4 my-6 sm:my-8">
     {/* Intro Section */}
     <div className="w-full flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
       <span className="bg-green-400 text-black font-bold text-3xl px-4 py-2 rounded-lg">Services</span>
@@ -201,7 +214,7 @@ const Services = () => (
         <ServiceCard key={idx} service={service} />
       ))}
     </div>
-  </section>
+  </div>
 );
 
 export default Services; 

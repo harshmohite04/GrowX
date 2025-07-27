@@ -7,7 +7,6 @@ import WorkingProcess from '../components/WorkingProcess';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 import Testimonials from '../components/Testimonials';
-import Journey from '../components/Journey';
 function MainPage() {
     return (
         <div>
@@ -16,7 +15,7 @@ function MainPage() {
             <Services />
             <WhyChooseUs />
             <Results />
-            <Journey />
+            {/* <Journey /> */}
             <WorkingProcess />
             <FAQ />
             <Testimonials />
